@@ -7,10 +7,6 @@ class Feedback(models.Model):
 
     """Feedback Model"""
 
-    class Meta(object):
-        verbose_name = (u"Feedback")
-        verbose_name_plural = (u"Feedbacks")
-
     name = models.CharField(
         max_length=256,
         blank=False,
@@ -29,6 +25,10 @@ class Feedback(models.Model):
     text = models.TextField(
         blank=False,
         verbose_name=(u"Text"))
+
+    class Meta(object):
+        verbose_name = (u"Feedback")
+        verbose_name_plural = (u"Feedbacks")
 
     def __unicode__(self):
         return u"From:%s Category:%s Subject:%s" % (self.name,
