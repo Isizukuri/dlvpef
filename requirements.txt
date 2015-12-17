@@ -1,0 +1,2 @@
+Django==1.9
+django-nocaptcha-recaptcha==0.0.18
